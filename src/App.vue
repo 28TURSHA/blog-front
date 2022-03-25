@@ -21,7 +21,8 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: black;
+  font-weight: 400;
+  background-color: #98FB98;
 }
 
 #nav {
@@ -34,6 +35,6 @@ export default {
 }
 
 #nav a.router-link-exact-active {
-  color: orange;
+  color: white;
 }
 </style>

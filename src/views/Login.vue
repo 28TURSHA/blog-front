@@ -5,10 +5,11 @@
         <h2>LOGIN</h2>
         <div class="underline-title"></div>
       </div>
+    
       <Form @submit="handleLogin" :validation-schema="schema">
         <div class="form-group">
-          <label for="username" style="padding-top:13px">Username</label>
-          <Field name="username" type="text" class="form-content" />
+          <label for="email" style="padding-top:13px">Email</label>
+          <Field name="email" type="text" class="form-content" />
           <div class="form-border"></div>
           <ErrorMessage name="username" class="error-feedback" />
         </div>
@@ -27,8 +28,8 @@
             <span>Login</span>
           </button>
         </div>
-        <router-link :to="{ name: 'SignUp' }" id="signup">Don't have account yet?</router-link>
-        
+        <router-link :to="{ path: '/signup' }" id="signup">Don't have account yet?</router-link>
+        <!-- <a :to="{ name: 'SignUp' }" id="signup">Don't have account yet?</a> -->
         <div class="form-group">
           <div v-if="message" class="alert alert-danger" role="alert">
             {{ message }}
@@ -53,7 +54,7 @@ export default {
   },
   data() {
     const schema = yup.object().shape({
-      username: yup.string().required("Username is required!"),
+      email: yup.string().required("Email is required!"),
       password: yup.string().required("Password is required!"),
     });
     return {
@@ -81,7 +82,7 @@ export default {
         },
         (error) => {
           this.loading = false;
-          this.message =
+          this.message = alert('user logged in')
             (error.response &&
               error.response.data &&
               error.response.data.message) ||
@@ -98,7 +99,7 @@ a {
   text-decoration: none;
 }
 body {
-  background: orange;
+  background: #98FB98;
   height: 1000vh;
 }
 label {
@@ -130,10 +131,10 @@ label {
   background: white;
   border: none;
   border-radius: 21px;
-  box-shadow: 0px 1px 8px orange;
+  box-shadow: 0px 1px 8px #98FB98;
   cursor: pointer;
-  color: orange;
-  font-family: "Raleway SemiBold", sans-serif;
+  color: #98FB98;
+  font-family: "Roboto", sans-serif;
   height: 42.3px;
   margin: 0 auto;
   margin-top: 50px;
@@ -141,7 +142,7 @@ label {
   width: 153px;
 }
 #submit-btn:hover {
-  box-shadow: 0px 1px 18px yellow;
+  box-shadow: 0px 1px 18px #39a06c;
 }
 .form {
   align-items: left;
@@ -149,7 +150,7 @@ label {
   flex-direction: column;
 }
 .form-border {
-  background: orange;
+  background: #98FB98;
   height: 1px;
   width: 100%;
 }
@@ -160,7 +161,7 @@ label {
   padding-top: 14px;
 }
 .underline-title {
-  background: orange;
+  background: #39a06c;
   height: 4px;
   margin: -1.1rem auto 0 auto;
   width: 90px;

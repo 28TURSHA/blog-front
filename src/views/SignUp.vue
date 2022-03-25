@@ -5,43 +5,41 @@
         <h2>SIGN UP</h2>
         <div class="underline-title"></div>
       </div>
-  
+
       <Form @submit="handleRegister" :validation-schema="schema">
         <div v-if="!successful">
           <div class="form-group">
-            <label for="username" style="padding-top:13px">Username</label>
+            <label for="username" style="padding-top: 13px">Username</label>
             <Field name="username" type="text" class="form-content" />
             <div class="form-border"></div>
             <ErrorMessage name="username" class="error-feedback" />
           </div>
           <div class="form-group">
-            <label for="email" style="padding-top:13px">Email</label>
+            <label for="email" style="padding-top: 13px">Email</label>
             <Field name="email" type="email" class="form-content" />
             <div class="form-border"></div>
             <ErrorMessage name="email" class="error-feedback" />
           </div>
           <div class="form-group">
-            <label for="telephone" style="padding-top:13px">Phone Number</label>
+            <label for="telephone" style="padding-top: 13px"
+              >Phone Number</label
+            >
             <Field name="telephone" type="telephone" class="form-content" />
             <div class="form-border"></div>
             <ErrorMessage name="telephone" class="error-feedback" />
           </div>
           <div class="form-group">
-            <label for="password" style="padding-top:13px">Password</label>
+            <label for="password" style="padding-top: 13px">Password</label>
             <Field name="password" type="password" class="form-content" />
             <div class="form-border"></div>
             <ErrorMessage name="password" class="error-feedback" />
           </div>
           <div class="form-group">
             <button id="submit-btn" class="btn btn-primary btn-block" :disabled="loading">
-              <span
-                v-show="loading"
-                class="spinner-border spinner-border-sm"
-              ></span>
+              <span v-show="loading" class="spinner-border spinner-border-sm"></span>
               Sign Up
             </button>
-                    <router-link :to="{ name: 'Login' }" id="login">Have an account?</router-link>
-
+            <router-link :to="{ name: 'Login' }" id="login">Have an account?</router-link>
           </div>
         </div>
       </Form>
@@ -60,7 +58,7 @@ export default {
   },
   data() {
     const schema = yup.object().shape({
-     username: yup
+      username: yup
         .string()
         .required("Username is required!")
         .min(3, "Must be at least 3 characters!")
@@ -95,7 +93,7 @@ export default {
   },
   mounted() {
     if (this.loggedIn) {
-      this.$router.push("/profile");
+      this.$router.push("/Login");
     }
   },
   methods: {
@@ -138,8 +136,8 @@ label {
 }
 
 #forgot-pass {
-  color: orange;
-  font-family: "Raleway", sans-serif;
+  color: #98FB98;
+  font-family: "Roboto", sans-serif;
   font-size: 10pt;
   margin-top: 3px;
   text-align: right;
@@ -156,27 +154,27 @@ label {
   padding: 12px 44px;
 }
 #card-title {
-  font-family: "Raleway Thin", sans-serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 4px;
   padding-bottom: 23px;
   padding-top: 13px;
   text-align: center;
 }
 #signup {
-  color:orange;
-  font-family: "Raleway", sans-serif;
+  color: #98FB98;
+  font-family: "Roboto", sans-serif;
   font-size: 10pt;
   margin-top: 16px;
   text-align: center;
 }
 #submit-btn {
-  background: white;
+  background: #98FB98;
   border: none;
   border-radius: 21px;
-  box-shadow: 0px 1px 8px orange;
+  box-shadow: 0px 1px 8px #98FB98;
   cursor: pointer;
   color: white;
-  font-family: "Raleway SemiBold", sans-serif;
+  font-family: "Roboto", sans-serif;
   height: 42.3px;
   margin: 0 auto;
   margin-top: 50px;
@@ -184,7 +182,7 @@ label {
   width: 153px;
 }
 #submit-btn:hover {
-  box-shadow: 0px 1px 18px yellow;
+  box-shadow: 0px 1px 18px #39a06c;
 }
 .form {
   align-items: left;
@@ -192,7 +190,7 @@ label {
   flex-direction: column;
 }
 .form-border {
-  background: orange;
+  background: #98FB98;
   height: 1px;
   width: 100%;
 }
@@ -203,7 +201,7 @@ label {
   padding-top: 14px;
 }
 .underline-title {
-  background: orange;
+  background: #98FB98;
   height: 3px;
   margin: -1.1rem auto 0 auto;
   width: 89px;

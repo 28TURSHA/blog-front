@@ -5,11 +5,11 @@ class BlogService{
   async create(blog) {
     return axios
       .post(API_URL, {
-        title: blog.title,
+        name: blog.name,
         description: blog.description,
         date: blog.date,
         content: blog.content,
-        img: blog.img,
+        image: blog.image,
       },
       { headers: authHeader() })
   }
@@ -20,11 +20,11 @@ class BlogService{
   update(blog) {
     return axios
       .patch(API_URL + blog._id,{
-        title: blog.title,
+        name: blog.name,
         description: blog.description,
         date: blog.date,
         content: blog.content,
-        img: blog.img,
+        image: blog.image,
       }, 
         { headers: authHeader() })
 }

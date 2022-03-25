@@ -1,6 +1,6 @@
 import axios from 'axios';
 import authHeader from './auth-header';
-const API_URL = 'https://pos-fullstack-backend.herokuapp.com/cart/';
+const API_URL = '';
 class CreateBlogService{
   getCreateBlog() {
     return axios
