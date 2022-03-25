@@ -34,32 +34,16 @@
               <input type="text" class="form-control" id="recipient-name" v-model="updatedBlog.name"/>
             </div>
             <div class="mb-3">
-              <label for="message-text" class="col-form-label" >Description:*</label
->
-              <input
-                type="text"
-                class="form-control"
-                id="recipient-name"
-                v-model="updatedBlog.description"
-              />
+              <label for="message-text" class="col-form-label" >Description:*</label>
+              <input type="text" class="form-control" id="recipient-name" v-model="updatedBlog.description"/>
             </div>
             <div class="mb-3">
               <label for="message-text" class="col-form-label">Content:*</label>
-              <input
-                type="text"
-                class="form-control"
-                id="recipient-name"
-                v-model="updatedBlog.content"
-              />
+              <input type="text" class="form-control" id="recipient-name" v-model="updatedBlog.content"/>
             </div>
             <div class="mb-3">
               <label for="message-text" class="col-form-label">Image:*</label>
-              <input
-                type="text"
-                class="form-control"
-                id="recipient-name"
-                v-model="updatedBlog.image"
-              />
+              <input type="text" class="form-control" id="recipient-name" v-model="updatedBlog.image" />
             </div>
           </form>
         </div>
@@ -76,33 +60,18 @@
   </div>
 
   <!--Modal: Delete blog post -->
-  <div
-    class="modal fade"
-    id="deleteModal"
-    tabindex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-  >
+  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel" style="color: #b18044">
-            Delete your profile?
-          </h5>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
+          <h5 class="modal-title" id="exampleModalLabel" style="color: #39a06c">  Delete your blog?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          Are you sure you want to delete you account?
+          Are you sure you want to delete your blog?
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn" data-bs-dismiss="modal">
-            CLOSE
-          </button>
+          <button type="button" class="btn" data-bs-dismiss="modal"> CLOSE</button>
           <button type="button" class="btn">YES</button>
         </div>
       </div>
